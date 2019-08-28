@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/location_search"
+            android:layout_width="341dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:textColorHint="@android:color/darker_gray"
+            android:ems="10"
+            android:hint="@string/location_search"
+            android:inputType="" />
+
+        <ImageButton
+            android:id="@+id/search_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="search_button"
+            android:onClick="onClick"
+            android:src="@mipmap/search" />
+
+    </RelativeLayout>
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="45dp"
+        tools:context=".FindDubActivity" />
+
+
+
+    <RelativeLayout
+        android:id="@+id/second_relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/dispensaries"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:src="@mipmap/dispense"
+            android:onClick="onClick"
+            android:layout_marginStart="100dp"
+            android:text="dispensary" />
+
+        <ImageButton
+            android:id="@+id/grow_store"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/dispensaries"
+            android:src="@mipmap/g"
+            android:onClick="onClick"
+            android:text="grow stores" />
+
+        <ImageButton
+            android:id="@+id/head_shop"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/grow_store"
+            android:src="@mipmap/smoke"
+            android:onClick="onClick"
+            android:text="head shop" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
