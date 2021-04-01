@@ -7,6 +7,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+
+
         <EditText
             android:id="@+id/location_search"
             android:layout_width="341dp"
